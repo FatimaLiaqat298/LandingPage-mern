@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-jet-black: #050505;
+  --color-jet-black-light: #0d0d0d;
+  --color-creamy-white: #fdfdf5;
+  --color-creamy-white-muted: #f2f2e6;
+
+  --color-primary: #3b82f6;
+  /* Premium Blue as requested */
+  --color-secondary: #10b981;
+  /* Emerald/Green */
+  --color-accent: #8b5cf6;
+  /* Purple for variety */
+
+  --font-sans: "Inter", "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-jet-black text-creamy-white antialiased selection:bg-primary/30;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-md bg-black/40 border border-white/5;
+  }
+
+  .glass-creamy {
+    @apply backdrop-blur-md bg-creamy-white/10 border border-creamy-white/20;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-creamy-white to-creamy-white/60;
+  }
+
+  .bg-gradient-jet {
+    @apply bg-gradient-to-b from-jet-black to-jet-black-light;
+  }
+
+  .btn-premium {
+    @apply px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-105 shadow-xl bg-gradient-to-r from-primary to-blue-600 text-white flex items-center justify-center gap-2 hover:shadow-primary/40 active:translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 rounded-xl font-bold transition-all border border-white/10 backdrop-blur-md bg-creamy-white/10 border-creamy-white/20 hover:bg-white/10 text-white flex items-center justify-center gap-2;
+  }
+}
+
+/* Custom animations for framer-motion or standard CSS */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
