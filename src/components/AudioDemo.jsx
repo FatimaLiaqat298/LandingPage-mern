@@ -10,7 +10,7 @@ const AudioDemo = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Don't Believe It? <span className="text-accent italic">Listen</span> to Discret AI in Action.
+                        Don't Believe It? <span className="text-primary italic">Listen</span> to Discret AI in Action.
                     </h2>
                     <p className="text-creamy-white/60 text-lg">
                         A Real Estate inquiry in Roman Urdu.
