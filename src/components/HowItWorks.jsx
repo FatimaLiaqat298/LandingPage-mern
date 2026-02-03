@@ -6,20 +6,21 @@ const steps = [
         icon: Search,
         title: "Map",
         description: "We analyze your business pipeline and identify high-impact automation spots.",
-        color: "bg-blue-500"
+        color: "bg-primary"
     },
     {
         icon: Settings,
         title: "Train",
         description: "We feed the AI your data—Fees, FAQs, and Calendars—for custom performance.",
-        color: "bg-purple-500"
+        color: "bg-secondary"
     },
     {
         icon: Rocket,
         title: "Deploy",
         description: "Your agent goes live on WhatsApp & Web in 48 hours. Start closing leads 24/7.",
-        color: "bg-emerald-500"
+        color: "bg-accent"
     }
+
 ];
 
 const HowItWorks = () => {
@@ -44,10 +45,12 @@ const HowItWorks = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.2 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
+
                                 className="flex flex-col items-center text-center group"
                             >
-                                <div className={`w-20 h-20 rounded-[2rem] ${step.color} shadow-lg shadow-${step.color.split('-')[1]}-500/20 flex items-center justify-center text-white mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10`}>
+                                <div className={`w-20 h-20 rounded-[2rem] ${step.color} shadow-lg flex items-center justify-center text-white mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10`}>
+
                                     <step.icon size={32} />
                                     <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-jet-black border-2 border-white/10 flex items-center justify-center text-sm font-bold">
                                         {index + 1}

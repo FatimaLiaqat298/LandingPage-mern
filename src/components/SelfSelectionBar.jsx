@@ -50,8 +50,8 @@ const SelfSelectionBar = () => {
                             key={option.id}
                             onClick={() => setSelected(option)}
                             className={`flex items-center gap-3 px-6 py-4 rounded-2xl transition-all border ${selected.id === option.id
-                                    ? "bg-primary/20 border-primary text-primary shadow-lg shadow-primary/10"
-                                    : "bg-white/5 border-white/10 text-white/60 hover:bg-white/10"
+                                ? "bg-primary/20 border-primary text-primary shadow-lg shadow-primary/10"
+                                : "bg-white/5 border-white/10 text-white/60 hover:bg-white/10"
                                 }`}
                         >
                             <option.icon size={20} />
@@ -79,10 +79,17 @@ const SelfSelectionBar = () => {
                                     <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                                         {selected.title}
                                     </h3>
-                                    <p className="text-lg md:text-xl text-creamy-white/70 leading-relaxed">
+                                    <p className="text-lg md:text-xl text-creamy-white/70 leading-relaxed mb-6">
                                         "{selected.description}"
                                     </p>
+                                    <button
+                                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                                        className="btn-premium !py-2 !px-5 text-sm cursor-pointer"
+                                    >
+                                        Book for this Industry
+                                    </button>
                                 </div>
+
                             </div>
                         </motion.div>
                     </AnimatePresence>

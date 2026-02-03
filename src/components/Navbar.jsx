@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "../utils/cn";
-
 const Navbar = () => {
+
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -32,7 +32,9 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-3">
-                    <img src="/src/assets/Discret Logo Colored.png" alt="Discret Logo" className="h-10 w-auto" />
+                    <img src="/Discret Logo Colored.png" alt="Discret Logo" className="h-10 w-auto" />
+
+
                     <span className="text-xl font-bold tracking-tight text-creamy-white">
                         Discret Digital
                     </span>
@@ -49,10 +51,14 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary/20">
+                    <button
+                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary/20 cursor-pointer"
+                    >
                         Book Demo
                         <ArrowRight size={16} />
                     </button>
+
                 </div>
 
                 {/* Mobile Toggle */}
@@ -83,10 +89,17 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
-                        <button className="bg-primary text-white p-4 rounded-xl font-bold flex items-center justify-center gap-2">
+                        <button
+                            onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="bg-primary text-white p-4 rounded-xl font-bold flex items-center justify-center gap-2 cursor-pointer"
+                        >
                             Book Demo
                             <ArrowRight size={18} />
                         </button>
+
                     </motion.div>
                 )}
             </AnimatePresence>

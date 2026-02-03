@@ -30,9 +30,11 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, type: "spring" }}
+                        viewport={{ once: false }}
                         className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-primary uppercase tracking-widest mb-4"
                     >
                         <Bot size={14} />
+
                         Communication & Revenue Focused
                     </motion.div>
 
@@ -45,10 +47,14 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-                        <button className="w-full sm:w-auto btn-premium !py-3 !px-6 text-sm">
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="w-full sm:w-auto btn-premium !py-3 !px-6 text-sm cursor-pointer"
+                        >
                             Build My AI Workforce
                             <ArrowRight size={18} />
                         </button>
+
                         <button className="w-full sm:w-auto btn-secondary !py-3 !px-6 text-sm">
                             <PlayCircle size={18} />
                             Watch Demo
@@ -145,8 +151,9 @@ const Hero = () => {
                                             delay: i * 0.05,
                                             ease: "easeInOut"
                                         }}
-                                        className="w-1 bg-[#8b5cf6]/60 rounded-full"
+                                        className="w-1 bg-primary/60 rounded-full"
                                     />
+
                                 ))}
                             </div>
                             <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-[8px] font-bold text-white/20 uppercase tracking-[0.2em] whitespace-nowrap">

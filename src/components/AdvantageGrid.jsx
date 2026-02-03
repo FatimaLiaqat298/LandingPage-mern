@@ -6,20 +6,23 @@ const advantages = [
         icon: Zap,
         title: "Code-Switching Engine",
         description: "Mix English and Urdu? No problem. We understand 'Yaar, price kya hai?' just as well as 'What is the price?'",
-        color: "from-blue-500/20 to-cyan-500/20"
+        color: "from-primary/20 to-secondary/20"
     },
+
     {
         icon: Mic,
         title: "Voice-Native Experience",
         description: "60% of Pakistanis prefer Voice Notes over typing. Our AI listens to audio and replies instantly.",
-        color: "from-purple-500/20 to-pink-500/20"
+        color: "from-accent/20 to-secondary/20"
     },
+
     {
         icon: Globe,
         title: "Omnichannel Presence",
         description: "One brain, everywhere. Your AI agent lives on your Website, WhatsApp, and Instagram simultaneously.",
-        color: "from-emerald-500/20 to-teal-500/20"
+        color: "from-orange-500/20 to-red-500/20"
     }
+
 ];
 
 const AdvantageGrid = () => {
@@ -42,8 +45,9 @@ const AdvantageGrid = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             className="glass p-8 rounded-3xl border border-white/5 relative group hover:border-primary/30 transition-colors"
+
                         >
                             <div className={`absolute inset-0 bg-gradient-to-br ${adv.color} opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none`} />
                             <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
@@ -90,12 +94,13 @@ const AdvantageGrid = () => {
                                         <Check size={20} />
                                     </div>
                                     <h4 className="text-xl font-bold text-primary">Discret AI</h4>
+
                                 </div>
                                 <ul className="space-y-4">
                                     {[
                                         "Fluent in English, Urdu, and Roman Urdu",
                                         "Voice-first: Understands audio messages",
-                                        "Omnichannel: Lives on WhatsApp, Web, Insta",
+                                        "Omnichannel: Lives on WhatsApp, Web, Meta",
                                         "Cultural Nuance: Understands local slang"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3 text-creamy-white/80 font-medium">

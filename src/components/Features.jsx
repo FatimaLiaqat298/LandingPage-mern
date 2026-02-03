@@ -6,7 +6,8 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, margin: "-100px" }}
+
         className="glass p-8 rounded-3xl group hover:bg-white/10 transition-all border border-white/5 hover:border-primary/20 shadow-2xl shadow-black/40"
     >
         <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
@@ -61,8 +62,9 @@ const Features = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="text-3xl md:text-5xl font-bold mb-6"
+
                 >
                     Most AI Bots Break When You Speak <span className="text-primary italic">"Desi."</span> We Don't.
                 </motion.h2>
@@ -70,8 +72,9 @@ const Features = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="text-creamy-white/60 max-w-2xl mx-auto text-lg"
+
                 >
                     Built specifically for the linguistic nuances of Pakistan. From Roman Urdu to heavy regional accents, we've got you covered.
                 </motion.p>

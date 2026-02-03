@@ -3,7 +3,8 @@ import { useEffect, useRef } from "react";
 
 const Counter = ({ value, suffix = "", duration = 2 }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const isInView = useInView(ref, { once: false, margin: "-50px" });
+
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, {
         damping: 30,
@@ -48,7 +49,8 @@ const Stats = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
+
                             className="text-center"
                         >
                             <div className="text-4xl md:text-5xl font-extrabold text-primary mb-4">

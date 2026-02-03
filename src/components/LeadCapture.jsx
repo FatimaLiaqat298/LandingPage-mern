@@ -75,7 +75,8 @@ const LeadCapture = () => {
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
+
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Ready to <span className="text-primary italic">Automate</span> Your Business?
@@ -100,7 +101,8 @@ const LeadCapture = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
+
                     className="glass p-8 md:p-12 rounded-[3rem] border border-white/10 bg-white/[0.02]"
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">

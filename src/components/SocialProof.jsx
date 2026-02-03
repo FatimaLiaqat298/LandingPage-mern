@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 const stats = [
     { label: "Years Research", value: "5+" },
     { label: "Accuracy Rate", value: "98%" },
-    { label: "Languages", value: "3" },
+    { label: "Languages", value: "10+" },
     { label: "Availability", value: "24/7" },
 ];
 
@@ -20,7 +20,8 @@ const SocialProof = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
+
                         className="glass p-10 rounded-[2.5rem] border border-white/10 flex flex-col items-center text-center"
                     >
                         <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mb-6 border-2 border-primary overflow-hidden">
@@ -43,7 +44,8 @@ const SocialProof = () => {
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
+
                         className="glass p-10 rounded-[2.5rem] border border-white/10 flex flex-col justify-center"
                     >
                         <p className="text-xl md:text-2xl font-medium text-creamy-white italic mb-8 leading-relaxed">
@@ -65,7 +67,8 @@ const SocialProof = () => {
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
+
                                 className="flex flex-col items-center text-center p-6 rounded-3xl bg-white/[0.02] border border-white/5"
                             >
                                 <span className="text-4xl md:text-5xl font-black text-primary mb-2 tracking-tight">{stat.value}</span>
